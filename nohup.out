@@ -1,0 +1,884 @@
+[NbConvertApp] Converting notebook Model_Design.ipynb to notebook
+[NbConvertApp] Executing notebook with kernel: python3
+/home/smantena/miniconda3/lib/python3.7/site-packages/joblib/externals/loky/backend/resource_tracker.py:320: UserWarning: resource_tracker: There appear to be 2 leaked file objects to clean up at shutdown
+  (len(rtype_registry), rtype))
+/home/smantena/miniconda3/lib/python3.7/site-packages/joblib/externals/loky/backend/resource_tracker.py:320: UserWarning: resource_tracker: There appear to be 38 leaked semlock objects to clean up at shutdown
+  (len(rtype_registry), rtype))
+/home/smantena/miniconda3/lib/python3.7/site-packages/joblib/externals/loky/backend/resource_tracker.py:320: UserWarning: resource_tracker: There appear to be 2 leaked folder objects to clean up at shutdown
+  (len(rtype_registry), rtype))
+Traceback (most recent call last):
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/nbclient/client.py", line 816, in async_execute_cell
+    exec_reply = await self.task_poll_for_reply
+  File "/home/smantena/miniconda3/lib/python3.7/asyncio/futures.py", line 260, in __await__
+    yield self  # This tells Task to wait for completion.
+  File "/home/smantena/miniconda3/lib/python3.7/asyncio/tasks.py", line 292, in __wakeup
+    future.result()
+  File "/home/smantena/miniconda3/lib/python3.7/asyncio/futures.py", line 173, in result
+    raise CancelledError
+concurrent.futures._base.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/nbclient/client.py", line 485, in async_setup_kernel
+    yield
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/nbclient/client.py", line 541, in async_execute
+    cell, index, execution_count=self.code_cells_executed + 1
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/nbconvert/preprocessors/execute.py", line 123, in async_execute_cell
+    cell, resources = self.preprocess_cell(cell, self.resources, cell_index)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/nbconvert/preprocessors/execute.py", line 146, in preprocess_cell
+    cell = run_sync(NotebookClient.async_execute_cell)(self, cell, index, store_history=self.store_history)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/nbclient/util.py", line 74, in wrapped
+    return just_run(coro(*args, **kwargs))
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/nbclient/util.py", line 53, in just_run
+    return loop.run_until_complete(coro)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/nest_asyncio.py", line 95, in run_until_complete
+    return f.result()
+  File "/home/smantena/miniconda3/lib/python3.7/asyncio/futures.py", line 178, in result
+    raise self._exception
+  File "/home/smantena/miniconda3/lib/python3.7/asyncio/tasks.py", line 225, in __step
+    result = coro.throw(exc)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/nbclient/client.py", line 820, in async_execute_cell
+    raise DeadKernelError("Kernel died")
+nbclient.exceptions.DeadKernelError: Kernel died
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/smantena/miniconda3/bin/jupyter-nbconvert", line 8, in <module>
+    sys.exit(main())
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/jupyter_core/application.py", line 270, in launch_instance
+    return super(JupyterApp, cls).launch_instance(argv=argv, **kwargs)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/traitlets/config/application.py", line 845, in launch_instance
+    app.start()
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/nbconvert/nbconvertapp.py", line 350, in start
+    self.convert_notebooks()
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/nbconvert/nbconvertapp.py", line 524, in convert_notebooks
+    self.convert_single_notebook(notebook_filename)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/nbconvert/nbconvertapp.py", line 489, in convert_single_notebook
+    output, resources = self.export_single_notebook(notebook_filename, resources, input_buffer=input_buffer)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/nbconvert/nbconvertapp.py", line 418, in export_single_notebook
+    output, resources = self.exporter.from_filename(notebook_filename, resources=resources)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/nbconvert/exporters/exporter.py", line 181, in from_filename
+    return self.from_file(f, resources=resources, **kw)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/nbconvert/exporters/exporter.py", line 199, in from_file
+    return self.from_notebook_node(nbformat.read(file_stream, as_version=4), resources=resources, **kw)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/nbconvert/exporters/notebook.py", line 32, in from_notebook_node
+    nb_copy, resources = super().from_notebook_node(nb, resources, **kw)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/nbconvert/exporters/exporter.py", line 143, in from_notebook_node
+    nb_copy, resources = self._preprocess(nb_copy, resources)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/nbconvert/exporters/exporter.py", line 318, in _preprocess
+    nbc, resc = preprocessor(nbc, resc)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/nbconvert/preprocessors/base.py", line 47, in __call__
+    return self.preprocess(nb, resources)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/nbconvert/preprocessors/execute.py", line 79, in preprocess
+    self.execute()
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/nbclient/util.py", line 74, in wrapped
+    return just_run(coro(*args, **kwargs))
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/nbclient/util.py", line 53, in just_run
+    return loop.run_until_complete(coro)
+  File "/home/smantena/miniconda3/lib/python3.7/asyncio/base_events.py", line 573, in run_until_complete
+    return future.result()
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/nbclient/client.py", line 543, in async_execute
+    self.set_widgets_metadata()
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/async_generator/_util.py", line 53, in __aexit__
+    await self._agen.athrow(type, value, traceback)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/nbclient/client.py", line 488, in async_setup_kernel
+    await self._async_cleanup_kernel()
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/nbclient/client.py", line 351, in _async_cleanup_kernel
+    assert self.km is not None
+AssertionError
+Task exception was never retrieved
+future: <Task finished coro=<NotebookClient._async_poll_kernel_alive() done, defined at /home/smantena/miniconda3/lib/python3.7/site-packages/nbclient/client.py:651> exception=AssertionError()>
+Traceback (most recent call last):
+  File "/home/smantena/miniconda3/lib/python3.7/asyncio/tasks.py", line 223, in __step
+    result = coro.send(None)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/nbclient/client.py", line 655, in _async_poll_kernel_alive
+    await self._async_check_alive()
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/nbclient/client.py", line 688, in _async_check_alive
+    assert self.kc is not None
+AssertionError
+[NbConvertApp] Converting notebook Model_Design.ipynb to notebook
+[NbConvertApp] Executing notebook with kernel: python3
+/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/model_selection/_validation.py:552: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/model_selection/_validation.py", line 531, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/pipeline.py", line 335, in fit
+    self._final_estimator.fit(Xt, y, **fit_params_last_step)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py", line 1304, in fit
+    solver = _check_solver(self.solver, self.penalty, self.dual)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py", line 443, in _check_solver
+    "got %s penalty." % (solver, penalty))
+ValueError: Solver newton-cg supports only 'l2' or 'none' penalties, got l1 penalty.
+
+  FitFailedWarning)
+/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py:1355: UserWarning: 'n_jobs' > 1 does not have any effect when 'solver' is set to 'liblinear'. Got 'n_jobs' = 60.
+  " = {}.".format(effective_n_jobs(self.n_jobs)))
+/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py:1355: UserWarning: 'n_jobs' > 1 does not have any effect when 'solver' is set to 'liblinear'. Got 'n_jobs' = 60.
+  " = {}.".format(effective_n_jobs(self.n_jobs)))
+/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/model_selection/_validation.py:552: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/model_selection/_validation.py", line 531, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/pipeline.py", line 335, in fit
+    self._final_estimator.fit(Xt, y, **fit_params_last_step)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py", line 1304, in fit
+    solver = _check_solver(self.solver, self.penalty, self.dual)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py", line 443, in _check_solver
+    "got %s penalty." % (solver, penalty))
+ValueError: Solver lbfgs supports only 'l2' or 'none' penalties, got l1 penalty.
+
+  FitFailedWarning)
+/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/model_selection/_validation.py:552: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/model_selection/_validation.py", line 531, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/pipeline.py", line 335, in fit
+    self._final_estimator.fit(Xt, y, **fit_params_last_step)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py", line 1304, in fit
+    solver = _check_solver(self.solver, self.penalty, self.dual)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py", line 443, in _check_solver
+    "got %s penalty." % (solver, penalty))
+ValueError: Solver newton-cg supports only 'l2' or 'none' penalties, got l1 penalty.
+
+  FitFailedWarning)
+/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/model_selection/_validation.py:552: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/model_selection/_validation.py", line 531, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/pipeline.py", line 335, in fit
+    self._final_estimator.fit(Xt, y, **fit_params_last_step)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py", line 1304, in fit
+    solver = _check_solver(self.solver, self.penalty, self.dual)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py", line 443, in _check_solver
+    "got %s penalty." % (solver, penalty))
+ValueError: Solver newton-cg supports only 'l2' or 'none' penalties, got l1 penalty.
+
+  FitFailedWarning)
+/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py:1355: UserWarning: 'n_jobs' > 1 does not have any effect when 'solver' is set to 'liblinear'. Got 'n_jobs' = 60.
+  " = {}.".format(effective_n_jobs(self.n_jobs)))
+/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py:1355: UserWarning: 'n_jobs' > 1 does not have any effect when 'solver' is set to 'liblinear'. Got 'n_jobs' = 60.
+  " = {}.".format(effective_n_jobs(self.n_jobs)))
+/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/model_selection/_validation.py:552: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/model_selection/_validation.py", line 531, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/pipeline.py", line 335, in fit
+    self._final_estimator.fit(Xt, y, **fit_params_last_step)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py", line 1304, in fit
+    solver = _check_solver(self.solver, self.penalty, self.dual)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py", line 443, in _check_solver
+    "got %s penalty." % (solver, penalty))
+ValueError: Solver newton-cg supports only 'l2' or 'none' penalties, got l1 penalty.
+
+  FitFailedWarning)
+/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/model_selection/_validation.py:552: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/model_selection/_validation.py", line 531, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/pipeline.py", line 335, in fit
+    self._final_estimator.fit(Xt, y, **fit_params_last_step)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py", line 1304, in fit
+    solver = _check_solver(self.solver, self.penalty, self.dual)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py", line 443, in _check_solver
+    "got %s penalty." % (solver, penalty))
+ValueError: Solver lbfgs supports only 'l2' or 'none' penalties, got l1 penalty.
+
+  FitFailedWarning)
+/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py:1355: UserWarning: 'n_jobs' > 1 does not have any effect when 'solver' is set to 'liblinear'. Got 'n_jobs' = 60.
+  " = {}.".format(effective_n_jobs(self.n_jobs)))
+/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py:1355: UserWarning: 'n_jobs' > 1 does not have any effect when 'solver' is set to 'liblinear'. Got 'n_jobs' = 60.
+  " = {}.".format(effective_n_jobs(self.n_jobs)))
+/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py:1355: UserWarning: 'n_jobs' > 1 does not have any effect when 'solver' is set to 'liblinear'. Got 'n_jobs' = 60.
+  " = {}.".format(effective_n_jobs(self.n_jobs)))
+/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py:1355: UserWarning: 'n_jobs' > 1 does not have any effect when 'solver' is set to 'liblinear'. Got 'n_jobs' = 60.
+  " = {}.".format(effective_n_jobs(self.n_jobs)))
+/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/model_selection/_validation.py:552: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/model_selection/_validation.py", line 531, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/pipeline.py", line 335, in fit
+    self._final_estimator.fit(Xt, y, **fit_params_last_step)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py", line 1304, in fit
+    solver = _check_solver(self.solver, self.penalty, self.dual)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py", line 443, in _check_solver
+    "got %s penalty." % (solver, penalty))
+ValueError: Solver newton-cg supports only 'l2' or 'none' penalties, got l1 penalty.
+
+  FitFailedWarning)
+/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py:1355: UserWarning: 'n_jobs' > 1 does not have any effect when 'solver' is set to 'liblinear'. Got 'n_jobs' = 60.
+  " = {}.".format(effective_n_jobs(self.n_jobs)))
+/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py:1355: UserWarning: 'n_jobs' > 1 does not have any effect when 'solver' is set to 'liblinear'. Got 'n_jobs' = 60.
+  " = {}.".format(effective_n_jobs(self.n_jobs)))
+/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/model_selection/_validation.py:552: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/model_selection/_validation.py", line 531, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/pipeline.py", line 335, in fit
+    self._final_estimator.fit(Xt, y, **fit_params_last_step)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py", line 1304, in fit
+    solver = _check_solver(self.solver, self.penalty, self.dual)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py", line 443, in _check_solver
+    "got %s penalty." % (solver, penalty))
+ValueError: Solver newton-cg supports only 'l2' or 'none' penalties, got l1 penalty.
+
+  FitFailedWarning)
+/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/model_selection/_validation.py:552: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/model_selection/_validation.py", line 531, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/pipeline.py", line 335, in fit
+    self._final_estimator.fit(Xt, y, **fit_params_last_step)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py", line 1304, in fit
+    solver = _check_solver(self.solver, self.penalty, self.dual)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py", line 443, in _check_solver
+    "got %s penalty." % (solver, penalty))
+ValueError: Solver lbfgs supports only 'l2' or 'none' penalties, got l1 penalty.
+
+  FitFailedWarning)
+/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py:1355: UserWarning: 'n_jobs' > 1 does not have any effect when 'solver' is set to 'liblinear'. Got 'n_jobs' = 60.
+  " = {}.".format(effective_n_jobs(self.n_jobs)))
+/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/model_selection/_validation.py:552: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/model_selection/_validation.py", line 531, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/pipeline.py", line 335, in fit
+    self._final_estimator.fit(Xt, y, **fit_params_last_step)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py", line 1304, in fit
+    solver = _check_solver(self.solver, self.penalty, self.dual)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py", line 443, in _check_solver
+    "got %s penalty." % (solver, penalty))
+ValueError: Solver newton-cg supports only 'l2' or 'none' penalties, got l1 penalty.
+
+  FitFailedWarning)
+/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py:1355: UserWarning: 'n_jobs' > 1 does not have any effect when 'solver' is set to 'liblinear'. Got 'n_jobs' = 60.
+  " = {}.".format(effective_n_jobs(self.n_jobs)))
+/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/model_selection/_validation.py:552: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/model_selection/_validation.py", line 531, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/pipeline.py", line 335, in fit
+    self._final_estimator.fit(Xt, y, **fit_params_last_step)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py", line 1304, in fit
+    solver = _check_solver(self.solver, self.penalty, self.dual)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py", line 443, in _check_solver
+    "got %s penalty." % (solver, penalty))
+ValueError: Solver lbfgs supports only 'l2' or 'none' penalties, got l1 penalty.
+
+  FitFailedWarning)
+/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/model_selection/_validation.py:552: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/model_selection/_validation.py", line 531, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/pipeline.py", line 335, in fit
+    self._final_estimator.fit(Xt, y, **fit_params_last_step)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py", line 1304, in fit
+    solver = _check_solver(self.solver, self.penalty, self.dual)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py", line 443, in _check_solver
+    "got %s penalty." % (solver, penalty))
+ValueError: Solver newton-cg supports only 'l2' or 'none' penalties, got l1 penalty.
+
+  FitFailedWarning)
+/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/model_selection/_validation.py:552: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/model_selection/_validation.py", line 531, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/pipeline.py", line 335, in fit
+    self._final_estimator.fit(Xt, y, **fit_params_last_step)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py", line 1304, in fit
+    solver = _check_solver(self.solver, self.penalty, self.dual)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py", line 443, in _check_solver
+    "got %s penalty." % (solver, penalty))
+ValueError: Solver lbfgs supports only 'l2' or 'none' penalties, got l1 penalty.
+
+  FitFailedWarning)
+/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py:1355: UserWarning: 'n_jobs' > 1 does not have any effect when 'solver' is set to 'liblinear'. Got 'n_jobs' = 60.
+  " = {}.".format(effective_n_jobs(self.n_jobs)))
+/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py:1355: UserWarning: 'n_jobs' > 1 does not have any effect when 'solver' is set to 'liblinear'. Got 'n_jobs' = 60.
+  " = {}.".format(effective_n_jobs(self.n_jobs)))
+/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/model_selection/_validation.py:552: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/model_selection/_validation.py", line 531, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/pipeline.py", line 335, in fit
+    self._final_estimator.fit(Xt, y, **fit_params_last_step)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py", line 1304, in fit
+    solver = _check_solver(self.solver, self.penalty, self.dual)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py", line 443, in _check_solver
+    "got %s penalty." % (solver, penalty))
+ValueError: Solver newton-cg supports only 'l2' or 'none' penalties, got l1 penalty.
+
+  FitFailedWarning)
+/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/model_selection/_validation.py:552: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/model_selection/_validation.py", line 531, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/pipeline.py", line 335, in fit
+    self._final_estimator.fit(Xt, y, **fit_params_last_step)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py", line 1304, in fit
+    solver = _check_solver(self.solver, self.penalty, self.dual)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py", line 443, in _check_solver
+    "got %s penalty." % (solver, penalty))
+ValueError: Solver lbfgs supports only 'l2' or 'none' penalties, got l1 penalty.
+
+  FitFailedWarning)
+/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py:1355: UserWarning: 'n_jobs' > 1 does not have any effect when 'solver' is set to 'liblinear'. Got 'n_jobs' = 60.
+  " = {}.".format(effective_n_jobs(self.n_jobs)))
+/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/model_selection/_validation.py:552: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/model_selection/_validation.py", line 531, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/pipeline.py", line 335, in fit
+    self._final_estimator.fit(Xt, y, **fit_params_last_step)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py", line 1304, in fit
+    solver = _check_solver(self.solver, self.penalty, self.dual)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py", line 443, in _check_solver
+    "got %s penalty." % (solver, penalty))
+ValueError: Solver newton-cg supports only 'l2' or 'none' penalties, got l1 penalty.
+
+  FitFailedWarning)
+/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py:1355: UserWarning: 'n_jobs' > 1 does not have any effect when 'solver' is set to 'liblinear'. Got 'n_jobs' = 60.
+  " = {}.".format(effective_n_jobs(self.n_jobs)))
+/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/model_selection/_validation.py:552: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/model_selection/_validation.py", line 531, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/pipeline.py", line 335, in fit
+    self._final_estimator.fit(Xt, y, **fit_params_last_step)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py", line 1304, in fit
+    solver = _check_solver(self.solver, self.penalty, self.dual)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py", line 443, in _check_solver
+    "got %s penalty." % (solver, penalty))
+ValueError: Solver newton-cg supports only 'l2' or 'none' penalties, got l1 penalty.
+
+  FitFailedWarning)
+/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/model_selection/_validation.py:552: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/model_selection/_validation.py", line 531, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/pipeline.py", line 335, in fit
+    self._final_estimator.fit(Xt, y, **fit_params_last_step)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py", line 1304, in fit
+    solver = _check_solver(self.solver, self.penalty, self.dual)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py", line 443, in _check_solver
+    "got %s penalty." % (solver, penalty))
+ValueError: Solver newton-cg supports only 'l2' or 'none' penalties, got l1 penalty.
+
+  FitFailedWarning)
+/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py:1355: UserWarning: 'n_jobs' > 1 does not have any effect when 'solver' is set to 'liblinear'. Got 'n_jobs' = 60.
+  " = {}.".format(effective_n_jobs(self.n_jobs)))
+/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py:1355: UserWarning: 'n_jobs' > 1 does not have any effect when 'solver' is set to 'liblinear'. Got 'n_jobs' = 60.
+  " = {}.".format(effective_n_jobs(self.n_jobs)))
+/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/model_selection/_validation.py:552: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/model_selection/_validation.py", line 531, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/pipeline.py", line 335, in fit
+    self._final_estimator.fit(Xt, y, **fit_params_last_step)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py", line 1304, in fit
+    solver = _check_solver(self.solver, self.penalty, self.dual)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py", line 443, in _check_solver
+    "got %s penalty." % (solver, penalty))
+ValueError: Solver newton-cg supports only 'l2' or 'none' penalties, got l1 penalty.
+
+  FitFailedWarning)
+/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py:1355: UserWarning: 'n_jobs' > 1 does not have any effect when 'solver' is set to 'liblinear'. Got 'n_jobs' = 60.
+  " = {}.".format(effective_n_jobs(self.n_jobs)))
+/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/model_selection/_validation.py:552: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/model_selection/_validation.py", line 531, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/pipeline.py", line 335, in fit
+    self._final_estimator.fit(Xt, y, **fit_params_last_step)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py", line 1304, in fit
+    solver = _check_solver(self.solver, self.penalty, self.dual)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py", line 443, in _check_solver
+    "got %s penalty." % (solver, penalty))
+ValueError: Solver lbfgs supports only 'l2' or 'none' penalties, got l1 penalty.
+
+  FitFailedWarning)
+/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/model_selection/_validation.py:552: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/model_selection/_validation.py", line 531, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/pipeline.py", line 335, in fit
+    self._final_estimator.fit(Xt, y, **fit_params_last_step)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py", line 1304, in fit
+    solver = _check_solver(self.solver, self.penalty, self.dual)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py", line 443, in _check_solver
+    "got %s penalty." % (solver, penalty))
+ValueError: Solver newton-cg supports only 'l2' or 'none' penalties, got l1 penalty.
+
+  FitFailedWarning)
+/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py:1355: UserWarning: 'n_jobs' > 1 does not have any effect when 'solver' is set to 'liblinear'. Got 'n_jobs' = 60.
+  " = {}.".format(effective_n_jobs(self.n_jobs)))
+/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/model_selection/_validation.py:552: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/model_selection/_validation.py", line 531, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/pipeline.py", line 335, in fit
+    self._final_estimator.fit(Xt, y, **fit_params_last_step)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py", line 1304, in fit
+    solver = _check_solver(self.solver, self.penalty, self.dual)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py", line 443, in _check_solver
+    "got %s penalty." % (solver, penalty))
+ValueError: Solver lbfgs supports only 'l2' or 'none' penalties, got l1 penalty.
+
+  FitFailedWarning)
+/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py:1355: UserWarning: 'n_jobs' > 1 does not have any effect when 'solver' is set to 'liblinear'. Got 'n_jobs' = 60.
+  " = {}.".format(effective_n_jobs(self.n_jobs)))
+/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/model_selection/_validation.py:552: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/model_selection/_validation.py", line 531, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/pipeline.py", line 335, in fit
+    self._final_estimator.fit(Xt, y, **fit_params_last_step)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py", line 1304, in fit
+    solver = _check_solver(self.solver, self.penalty, self.dual)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py", line 443, in _check_solver
+    "got %s penalty." % (solver, penalty))
+ValueError: Solver lbfgs supports only 'l2' or 'none' penalties, got l1 penalty.
+
+  FitFailedWarning)
+/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py:1355: UserWarning: 'n_jobs' > 1 does not have any effect when 'solver' is set to 'liblinear'. Got 'n_jobs' = 60.
+  " = {}.".format(effective_n_jobs(self.n_jobs)))
+/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py:1355: UserWarning: 'n_jobs' > 1 does not have any effect when 'solver' is set to 'liblinear'. Got 'n_jobs' = 60.
+  " = {}.".format(effective_n_jobs(self.n_jobs)))
+/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py:1355: UserWarning: 'n_jobs' > 1 does not have any effect when 'solver' is set to 'liblinear'. Got 'n_jobs' = 60.
+  " = {}.".format(effective_n_jobs(self.n_jobs)))
+/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/model_selection/_validation.py:552: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/model_selection/_validation.py", line 531, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/pipeline.py", line 335, in fit
+    self._final_estimator.fit(Xt, y, **fit_params_last_step)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py", line 1304, in fit
+    solver = _check_solver(self.solver, self.penalty, self.dual)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py", line 443, in _check_solver
+    "got %s penalty." % (solver, penalty))
+ValueError: Solver newton-cg supports only 'l2' or 'none' penalties, got l1 penalty.
+
+  FitFailedWarning)
+/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py:1355: UserWarning: 'n_jobs' > 1 does not have any effect when 'solver' is set to 'liblinear'. Got 'n_jobs' = 60.
+  " = {}.".format(effective_n_jobs(self.n_jobs)))
+/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py:1355: UserWarning: 'n_jobs' > 1 does not have any effect when 'solver' is set to 'liblinear'. Got 'n_jobs' = 60.
+  " = {}.".format(effective_n_jobs(self.n_jobs)))
+/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py:1355: UserWarning: 'n_jobs' > 1 does not have any effect when 'solver' is set to 'liblinear'. Got 'n_jobs' = 60.
+  " = {}.".format(effective_n_jobs(self.n_jobs)))
+/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/model_selection/_validation.py:552: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/model_selection/_validation.py", line 531, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/pipeline.py", line 335, in fit
+    self._final_estimator.fit(Xt, y, **fit_params_last_step)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py", line 1304, in fit
+    solver = _check_solver(self.solver, self.penalty, self.dual)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py", line 443, in _check_solver
+    "got %s penalty." % (solver, penalty))
+ValueError: Solver lbfgs supports only 'l2' or 'none' penalties, got l1 penalty.
+
+  FitFailedWarning)
+/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py:1355: UserWarning: 'n_jobs' > 1 does not have any effect when 'solver' is set to 'liblinear'. Got 'n_jobs' = 60.
+  " = {}.".format(effective_n_jobs(self.n_jobs)))
+/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py:1355: UserWarning: 'n_jobs' > 1 does not have any effect when 'solver' is set to 'liblinear'. Got 'n_jobs' = 60.
+  " = {}.".format(effective_n_jobs(self.n_jobs)))
+/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py:1355: UserWarning: 'n_jobs' > 1 does not have any effect when 'solver' is set to 'liblinear'. Got 'n_jobs' = 60.
+  " = {}.".format(effective_n_jobs(self.n_jobs)))
+/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/model_selection/_validation.py:552: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/model_selection/_validation.py", line 531, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/pipeline.py", line 335, in fit
+    self._final_estimator.fit(Xt, y, **fit_params_last_step)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py", line 1304, in fit
+    solver = _check_solver(self.solver, self.penalty, self.dual)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py", line 443, in _check_solver
+    "got %s penalty." % (solver, penalty))
+ValueError: Solver newton-cg supports only 'l2' or 'none' penalties, got l1 penalty.
+
+  FitFailedWarning)
+/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py:1355: UserWarning: 'n_jobs' > 1 does not have any effect when 'solver' is set to 'liblinear'. Got 'n_jobs' = 60.
+  " = {}.".format(effective_n_jobs(self.n_jobs)))
+/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/model_selection/_validation.py:552: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/model_selection/_validation.py", line 531, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/pipeline.py", line 335, in fit
+    self._final_estimator.fit(Xt, y, **fit_params_last_step)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py", line 1304, in fit
+    solver = _check_solver(self.solver, self.penalty, self.dual)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py", line 443, in _check_solver
+    "got %s penalty." % (solver, penalty))
+ValueError: Solver lbfgs supports only 'l2' or 'none' penalties, got l1 penalty.
+
+  FitFailedWarning)
+/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py:1355: UserWarning: 'n_jobs' > 1 does not have any effect when 'solver' is set to 'liblinear'. Got 'n_jobs' = 60.
+  " = {}.".format(effective_n_jobs(self.n_jobs)))
+/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/model_selection/_validation.py:552: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/model_selection/_validation.py", line 531, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/pipeline.py", line 335, in fit
+    self._final_estimator.fit(Xt, y, **fit_params_last_step)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py", line 1304, in fit
+    solver = _check_solver(self.solver, self.penalty, self.dual)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py", line 443, in _check_solver
+    "got %s penalty." % (solver, penalty))
+ValueError: Solver newton-cg supports only 'l2' or 'none' penalties, got l1 penalty.
+
+  FitFailedWarning)
+/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py:1355: UserWarning: 'n_jobs' > 1 does not have any effect when 'solver' is set to 'liblinear'. Got 'n_jobs' = 60.
+  " = {}.".format(effective_n_jobs(self.n_jobs)))
+/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py:1355: UserWarning: 'n_jobs' > 1 does not have any effect when 'solver' is set to 'liblinear'. Got 'n_jobs' = 60.
+  " = {}.".format(effective_n_jobs(self.n_jobs)))
+/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/model_selection/_validation.py:552: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/model_selection/_validation.py", line 531, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/pipeline.py", line 335, in fit
+    self._final_estimator.fit(Xt, y, **fit_params_last_step)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py", line 1304, in fit
+    solver = _check_solver(self.solver, self.penalty, self.dual)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py", line 443, in _check_solver
+    "got %s penalty." % (solver, penalty))
+ValueError: Solver lbfgs supports only 'l2' or 'none' penalties, got l1 penalty.
+
+  FitFailedWarning)
+/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/model_selection/_validation.py:552: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/model_selection/_validation.py", line 531, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/pipeline.py", line 335, in fit
+    self._final_estimator.fit(Xt, y, **fit_params_last_step)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py", line 1304, in fit
+    solver = _check_solver(self.solver, self.penalty, self.dual)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py", line 443, in _check_solver
+    "got %s penalty." % (solver, penalty))
+ValueError: Solver lbfgs supports only 'l2' or 'none' penalties, got l1 penalty.
+
+  FitFailedWarning)
+/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py:1355: UserWarning: 'n_jobs' > 1 does not have any effect when 'solver' is set to 'liblinear'. Got 'n_jobs' = 60.
+  " = {}.".format(effective_n_jobs(self.n_jobs)))
+/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py:1355: UserWarning: 'n_jobs' > 1 does not have any effect when 'solver' is set to 'liblinear'. Got 'n_jobs' = 60.
+  " = {}.".format(effective_n_jobs(self.n_jobs)))
+/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/model_selection/_validation.py:552: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/model_selection/_validation.py", line 531, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/pipeline.py", line 335, in fit
+    self._final_estimator.fit(Xt, y, **fit_params_last_step)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py", line 1304, in fit
+    solver = _check_solver(self.solver, self.penalty, self.dual)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py", line 443, in _check_solver
+    "got %s penalty." % (solver, penalty))
+ValueError: Solver lbfgs supports only 'l2' or 'none' penalties, got l1 penalty.
+
+  FitFailedWarning)
+/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/model_selection/_validation.py:552: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/model_selection/_validation.py", line 531, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/pipeline.py", line 335, in fit
+    self._final_estimator.fit(Xt, y, **fit_params_last_step)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py", line 1304, in fit
+    solver = _check_solver(self.solver, self.penalty, self.dual)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py", line 443, in _check_solver
+    "got %s penalty." % (solver, penalty))
+ValueError: Solver lbfgs supports only 'l2' or 'none' penalties, got l1 penalty.
+
+  FitFailedWarning)
+/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py:1355: UserWarning: 'n_jobs' > 1 does not have any effect when 'solver' is set to 'liblinear'. Got 'n_jobs' = 60.
+  " = {}.".format(effective_n_jobs(self.n_jobs)))
+/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py:1355: UserWarning: 'n_jobs' > 1 does not have any effect when 'solver' is set to 'liblinear'. Got 'n_jobs' = 60.
+  " = {}.".format(effective_n_jobs(self.n_jobs)))
+/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/model_selection/_validation.py:552: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/model_selection/_validation.py", line 531, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/pipeline.py", line 335, in fit
+    self._final_estimator.fit(Xt, y, **fit_params_last_step)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py", line 1304, in fit
+    solver = _check_solver(self.solver, self.penalty, self.dual)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py", line 443, in _check_solver
+    "got %s penalty." % (solver, penalty))
+ValueError: Solver lbfgs supports only 'l2' or 'none' penalties, got l1 penalty.
+
+  FitFailedWarning)
+/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/model_selection/_validation.py:552: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/model_selection/_validation.py", line 531, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/pipeline.py", line 335, in fit
+    self._final_estimator.fit(Xt, y, **fit_params_last_step)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py", line 1304, in fit
+    solver = _check_solver(self.solver, self.penalty, self.dual)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py", line 443, in _check_solver
+    "got %s penalty." % (solver, penalty))
+ValueError: Solver newton-cg supports only 'l2' or 'none' penalties, got l1 penalty.
+
+  FitFailedWarning)
+/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/model_selection/_validation.py:552: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/model_selection/_validation.py", line 531, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/pipeline.py", line 335, in fit
+    self._final_estimator.fit(Xt, y, **fit_params_last_step)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py", line 1304, in fit
+    solver = _check_solver(self.solver, self.penalty, self.dual)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py", line 443, in _check_solver
+    "got %s penalty." % (solver, penalty))
+ValueError: Solver lbfgs supports only 'l2' or 'none' penalties, got l1 penalty.
+
+  FitFailedWarning)
+/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py:1355: UserWarning: 'n_jobs' > 1 does not have any effect when 'solver' is set to 'liblinear'. Got 'n_jobs' = 60.
+  " = {}.".format(effective_n_jobs(self.n_jobs)))
+/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/model_selection/_validation.py:552: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/model_selection/_validation.py", line 531, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/pipeline.py", line 335, in fit
+    self._final_estimator.fit(Xt, y, **fit_params_last_step)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py", line 1304, in fit
+    solver = _check_solver(self.solver, self.penalty, self.dual)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py", line 443, in _check_solver
+    "got %s penalty." % (solver, penalty))
+ValueError: Solver newton-cg supports only 'l2' or 'none' penalties, got l1 penalty.
+
+  FitFailedWarning)
+/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py:1355: UserWarning: 'n_jobs' > 1 does not have any effect when 'solver' is set to 'liblinear'. Got 'n_jobs' = 60.
+  " = {}.".format(effective_n_jobs(self.n_jobs)))
+/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py:1355: UserWarning: 'n_jobs' > 1 does not have any effect when 'solver' is set to 'liblinear'. Got 'n_jobs' = 60.
+  " = {}.".format(effective_n_jobs(self.n_jobs)))
+/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/model_selection/_validation.py:552: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/model_selection/_validation.py", line 531, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/pipeline.py", line 335, in fit
+    self._final_estimator.fit(Xt, y, **fit_params_last_step)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py", line 1304, in fit
+    solver = _check_solver(self.solver, self.penalty, self.dual)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py", line 443, in _check_solver
+    "got %s penalty." % (solver, penalty))
+ValueError: Solver newton-cg supports only 'l2' or 'none' penalties, got l1 penalty.
+
+  FitFailedWarning)
+/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/model_selection/_validation.py:552: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/model_selection/_validation.py", line 531, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/pipeline.py", line 335, in fit
+    self._final_estimator.fit(Xt, y, **fit_params_last_step)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py", line 1304, in fit
+    solver = _check_solver(self.solver, self.penalty, self.dual)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py", line 443, in _check_solver
+    "got %s penalty." % (solver, penalty))
+ValueError: Solver newton-cg supports only 'l2' or 'none' penalties, got l1 penalty.
+
+  FitFailedWarning)
+/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/model_selection/_validation.py:552: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/model_selection/_validation.py", line 531, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/pipeline.py", line 335, in fit
+    self._final_estimator.fit(Xt, y, **fit_params_last_step)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py", line 1304, in fit
+    solver = _check_solver(self.solver, self.penalty, self.dual)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py", line 443, in _check_solver
+    "got %s penalty." % (solver, penalty))
+ValueError: Solver lbfgs supports only 'l2' or 'none' penalties, got l1 penalty.
+
+  FitFailedWarning)
+/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py:1355: UserWarning: 'n_jobs' > 1 does not have any effect when 'solver' is set to 'liblinear'. Got 'n_jobs' = 60.
+  " = {}.".format(effective_n_jobs(self.n_jobs)))
+/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/model_selection/_validation.py:552: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/model_selection/_validation.py", line 531, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/pipeline.py", line 335, in fit
+    self._final_estimator.fit(Xt, y, **fit_params_last_step)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py", line 1304, in fit
+    solver = _check_solver(self.solver, self.penalty, self.dual)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py", line 443, in _check_solver
+    "got %s penalty." % (solver, penalty))
+ValueError: Solver newton-cg supports only 'l2' or 'none' penalties, got l1 penalty.
+
+  FitFailedWarning)
+/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/model_selection/_validation.py:552: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/model_selection/_validation.py", line 531, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/pipeline.py", line 335, in fit
+    self._final_estimator.fit(Xt, y, **fit_params_last_step)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py", line 1304, in fit
+    solver = _check_solver(self.solver, self.penalty, self.dual)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py", line 443, in _check_solver
+    "got %s penalty." % (solver, penalty))
+ValueError: Solver lbfgs supports only 'l2' or 'none' penalties, got l1 penalty.
+
+  FitFailedWarning)
+/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py:1355: UserWarning: 'n_jobs' > 1 does not have any effect when 'solver' is set to 'liblinear'. Got 'n_jobs' = 60.
+  " = {}.".format(effective_n_jobs(self.n_jobs)))
+/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/model_selection/_validation.py:552: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/model_selection/_validation.py", line 531, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/pipeline.py", line 335, in fit
+    self._final_estimator.fit(Xt, y, **fit_params_last_step)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py", line 1304, in fit
+    solver = _check_solver(self.solver, self.penalty, self.dual)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py", line 443, in _check_solver
+    "got %s penalty." % (solver, penalty))
+ValueError: Solver lbfgs supports only 'l2' or 'none' penalties, got l1 penalty.
+
+  FitFailedWarning)
+/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py:1355: UserWarning: 'n_jobs' > 1 does not have any effect when 'solver' is set to 'liblinear'. Got 'n_jobs' = 60.
+  " = {}.".format(effective_n_jobs(self.n_jobs)))
+/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/model_selection/_validation.py:552: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/model_selection/_validation.py", line 531, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/pipeline.py", line 335, in fit
+    self._final_estimator.fit(Xt, y, **fit_params_last_step)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py", line 1304, in fit
+    solver = _check_solver(self.solver, self.penalty, self.dual)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py", line 443, in _check_solver
+    "got %s penalty." % (solver, penalty))
+ValueError: Solver newton-cg supports only 'l2' or 'none' penalties, got l1 penalty.
+
+  FitFailedWarning)
+/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py:1355: UserWarning: 'n_jobs' > 1 does not have any effect when 'solver' is set to 'liblinear'. Got 'n_jobs' = 60.
+  " = {}.".format(effective_n_jobs(self.n_jobs)))
+/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/model_selection/_validation.py:552: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/model_selection/_validation.py", line 531, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/pipeline.py", line 335, in fit
+    self._final_estimator.fit(Xt, y, **fit_params_last_step)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py", line 1304, in fit
+    solver = _check_solver(self.solver, self.penalty, self.dual)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py", line 443, in _check_solver
+    "got %s penalty." % (solver, penalty))
+ValueError: Solver lbfgs supports only 'l2' or 'none' penalties, got l1 penalty.
+
+  FitFailedWarning)
+/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py:1355: UserWarning: 'n_jobs' > 1 does not have any effect when 'solver' is set to 'liblinear'. Got 'n_jobs' = 60.
+  " = {}.".format(effective_n_jobs(self.n_jobs)))
+/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py:1355: UserWarning: 'n_jobs' > 1 does not have any effect when 'solver' is set to 'liblinear'. Got 'n_jobs' = 60.
+  " = {}.".format(effective_n_jobs(self.n_jobs)))
+/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/model_selection/_validation.py:552: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/model_selection/_validation.py", line 531, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/pipeline.py", line 335, in fit
+    self._final_estimator.fit(Xt, y, **fit_params_last_step)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py", line 1304, in fit
+    solver = _check_solver(self.solver, self.penalty, self.dual)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py", line 443, in _check_solver
+    "got %s penalty." % (solver, penalty))
+ValueError: Solver lbfgs supports only 'l2' or 'none' penalties, got l1 penalty.
+
+  FitFailedWarning)
+/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_stochastic_gradient.py:573: ConvergenceWarning: Maximum number of iteration reached before convergence. Consider increasing max_iter to improve the fit.
+  ConvergenceWarning)
+/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/model_selection/_validation.py:552: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/model_selection/_validation.py", line 531, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/pipeline.py", line 335, in fit
+    self._final_estimator.fit(Xt, y, **fit_params_last_step)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py", line 1304, in fit
+    solver = _check_solver(self.solver, self.penalty, self.dual)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py", line 443, in _check_solver
+    "got %s penalty." % (solver, penalty))
+ValueError: Solver lbfgs supports only 'l2' or 'none' penalties, got l1 penalty.
+
+  FitFailedWarning)
+/home/smantena/miniconda3/lib/python3.7/site-packages/joblib/externals/loky/backend/resource_tracker.py:320: UserWarning: resource_tracker: There appear to be 1 leaked file objects to clean up at shutdown
+  (len(rtype_registry), rtype))
+/home/smantena/miniconda3/lib/python3.7/site-packages/joblib/externals/loky/backend/resource_tracker.py:320: UserWarning: resource_tracker: There appear to be 66 leaked semlock objects to clean up at shutdown
+  (len(rtype_registry), rtype))
+/home/smantena/miniconda3/lib/python3.7/site-packages/joblib/externals/loky/backend/resource_tracker.py:320: UserWarning: resource_tracker: There appear to be 17 leaked folder objects to clean up at shutdown
+  (len(rtype_registry), rtype))
+Traceback (most recent call last):
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/nbclient/client.py", line 816, in async_execute_cell
+    exec_reply = await self.task_poll_for_reply
+  File "/home/smantena/miniconda3/lib/python3.7/asyncio/futures.py", line 260, in __await__
+    yield self  # This tells Task to wait for completion.
+  File "/home/smantena/miniconda3/lib/python3.7/asyncio/tasks.py", line 292, in __wakeup
+    future.result()
+  File "/home/smantena/miniconda3/lib/python3.7/asyncio/futures.py", line 173, in result
+    raise CancelledError
+concurrent.futures._base.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/nbclient/client.py", line 485, in async_setup_kernel
+    yield
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/nbclient/client.py", line 541, in async_execute
+    cell, index, execution_count=self.code_cells_executed + 1
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/nbconvert/preprocessors/execute.py", line 123, in async_execute_cell
+    cell, resources = self.preprocess_cell(cell, self.resources, cell_index)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/nbconvert/preprocessors/execute.py", line 146, in preprocess_cell
+    cell = run_sync(NotebookClient.async_execute_cell)(self, cell, index, store_history=self.store_history)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/nbclient/util.py", line 74, in wrapped
+    return just_run(coro(*args, **kwargs))
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/nbclient/util.py", line 53, in just_run
+    return loop.run_until_complete(coro)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/nest_asyncio.py", line 95, in run_until_complete
+    return f.result()
+  File "/home/smantena/miniconda3/lib/python3.7/asyncio/futures.py", line 178, in result
+    raise self._exception
+  File "/home/smantena/miniconda3/lib/python3.7/asyncio/tasks.py", line 225, in __step
+    result = coro.throw(exc)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/nbclient/client.py", line 820, in async_execute_cell
+    raise DeadKernelError("Kernel died")
+nbclient.exceptions.DeadKernelError: Kernel died
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/smantena/miniconda3/bin/jupyter-nbconvert", line 8, in <module>
+    sys.exit(main())
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/jupyter_core/application.py", line 270, in launch_instance
+    return super(JupyterApp, cls).launch_instance(argv=argv, **kwargs)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/traitlets/config/application.py", line 845, in launch_instance
+    app.start()
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/nbconvert/nbconvertapp.py", line 350, in start
+    self.convert_notebooks()
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/nbconvert/nbconvertapp.py", line 524, in convert_notebooks
+    self.convert_single_notebook(notebook_filename)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/nbconvert/nbconvertapp.py", line 489, in convert_single_notebook
+    output, resources = self.export_single_notebook(notebook_filename, resources, input_buffer=input_buffer)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/nbconvert/nbconvertapp.py", line 418, in export_single_notebook
+    output, resources = self.exporter.from_filename(notebook_filename, resources=resources)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/nbconvert/exporters/exporter.py", line 181, in from_filename
+    return self.from_file(f, resources=resources, **kw)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/nbconvert/exporters/exporter.py", line 199, in from_file
+    return self.from_notebook_node(nbformat.read(file_stream, as_version=4), resources=resources, **kw)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/nbconvert/exporters/notebook.py", line 32, in from_notebook_node
+    nb_copy, resources = super().from_notebook_node(nb, resources, **kw)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/nbconvert/exporters/exporter.py", line 143, in from_notebook_node
+    nb_copy, resources = self._preprocess(nb_copy, resources)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/nbconvert/exporters/exporter.py", line 318, in _preprocess
+    nbc, resc = preprocessor(nbc, resc)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/nbconvert/preprocessors/base.py", line 47, in __call__
+    return self.preprocess(nb, resources)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/nbconvert/preprocessors/execute.py", line 79, in preprocess
+    self.execute()
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/nbclient/util.py", line 74, in wrapped
+    return just_run(coro(*args, **kwargs))
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/nbclient/util.py", line 53, in just_run
+    return loop.run_until_complete(coro)
+  File "/home/smantena/miniconda3/lib/python3.7/asyncio/base_events.py", line 573, in run_until_complete
+    return future.result()
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/nbclient/client.py", line 543, in async_execute
+    self.set_widgets_metadata()
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/async_generator/_util.py", line 53, in __aexit__
+    await self._agen.athrow(type, value, traceback)
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/nbclient/client.py", line 488, in async_setup_kernel
+    await self._async_cleanup_kernel()
+  File "/home/smantena/miniconda3/lib/python3.7/site-packages/nbclient/client.py", line 351, in _async_cleanup_kernel
+    assert self.km is not None
+AssertionError
