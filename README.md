@@ -1,6 +1,6 @@
 # Prediction of Hypoglycemia in Critically-Ill Patients
 
-This repository is meant to accompany the paper,
+This repository is meant to accompany the paper:
 
 #### Predicting Hypoglycemia in Critically Ill Patients Using Machine Learning and Electronic Health Records
 
@@ -11,3 +11,9 @@ Sreekar Mantena1, Aldo Robles Arévalo2, Jason H. Maley3, Susana M. da Silva Vie
 4.  Massachusetts Institute of Technology, Cambridge, MA, USA
 5.  Rush University Medical Center, Chicago, IL, USA
 6.  Harvard T.H. Chan School of Public Health, Boston, MA, USA
+
+
+Respository overview:
+
+code/: Contains all the scripts used to extract data from the eICU-CRD database and develop prediction models
+figures/: Contains all the figures included in the manuscript
