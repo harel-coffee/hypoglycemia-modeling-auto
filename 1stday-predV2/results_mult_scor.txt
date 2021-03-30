@@ -1,0 +1,121 @@
+
+
+
+
+Model Name: LR
+Training AUC: 0.7891
+Test AUC: 0.785
+
+Results on Test Set Prediction (min delta):
+Threshold: 0.1517
+Accuracy: 0.7109
+Precision: 0.3257
+Specificity: 0.7108
+Sensitivity: 0.7116
+AUC: 0.7845
+AUPR: 0.5423
+
+Results on Test Set Prediction (max precision):
+Threshold: 0.5837
+Accuracy: 0.8506
+Precision: 0.7095
+Specificity: 0.9878
+Sensitivity: 0.1518
+AUC: 0.7845
+AUPR: 0.5002
+
+
+
+Model Name: XGB
+Training AUC: 0.8111
+Test AUC: 0.81
+
+Results on Test Set Prediction (min delta):
+Threshold: 0.148
+Accuracy: 0.7274
+Precision: 0.3437
+Specificity: 0.7274
+Sensitivity: 0.7273
+AUC: 0.8104
+AUPR: 0.5579
+
+Results on Test Set Prediction (max precision):
+Threshold: 0.9963
+Accuracy: 0.836
+Precision: 1.0
+Specificity: 1.0
+Sensitivity: 0.0004
+AUC: 0.8104
+AUPR: 0.5822
+
+
+
+Model Name: AdaBoost
+Training AUC: 0.8081
+Test AUC: 0.811
+
+Results on Test Set Prediction (min delta):
+Threshold: 0.4559
+Accuracy: 0.7308
+Precision: 0.3477
+Specificity: 0.7307
+Sensitivity: 0.7311
+AUC: 0.8111
+AUPR: 0.5614
+
+Results on Test Set Prediction (max precision):
+Threshold: 0.8654
+Accuracy: 0.836
+Precision: 1.0
+Specificity: 1.0
+Sensitivity: 0.0004
+AUC: 0.8111
+AUPR: 0.5822
+
+
+
+Model Name: Bagging
+Training AUC: 0.7987
+Test AUC: 0.799
+
+Results on Test Set Prediction (min delta):
+Threshold: 0.1628
+Accuracy: 0.7224
+Precision: 0.3381
+Specificity: 0.7224
+Sensitivity: 0.7222
+AUC: 0.799
+AUPR: 0.5529
+
+Results on Test Set Prediction (max precision):
+Threshold: 0.6282
+Accuracy: 0.836
+Precision: 1.0
+Specificity: 1.0
+Sensitivity: 0.0004
+AUC: 0.799
+AUPR: 0.5822
+
+
+
+Model Name: Random Forest
+Training AUC: 0.8018
+Test AUC: 0.803
+
+Results on Test Set Prediction (min delta):
+Threshold: 0.1714
+Accuracy: 0.7266
+Precision: 0.3428
+Specificity: 0.7266
+Sensitivity: 0.7264
+AUC: 0.803
+AUPR: 0.5571
+
+Results on Test Set Prediction (max precision):
+Threshold: 0.6132
+Accuracy: 0.836
+Precision: 1.0
+Specificity: 1.0
+Sensitivity: 0.0004
+AUC: 0.803
+AUPR: 0.5822

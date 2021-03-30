@@ -383,3 +383,27 @@ Specificity: 0.9886
 Sensitivity: 0.1873
 AUC: 0.7621
 AUPR: 0.5422
+
+
+
+Model Name: LR
+Training AUC: 0.7239
+Test AUC: 0.774
+
+Results on Test Set Prediction (min delta):
+Threshold: 0.143
+Accuracy: 0.7035
+Precision: 0.3178
+Specificity: 0.7035
+Sensitivity: 0.7036
+AUC: 0.7743
+AUPR: 0.535
+
+Results on Test Set Prediction (max precision):
+Threshold: 0.9826
+Accuracy: 0.836
+Precision: 1.0
+Specificity: 1.0
+Sensitivity: 0.0004
+AUC: 0.7743
+AUPR: 0.5822

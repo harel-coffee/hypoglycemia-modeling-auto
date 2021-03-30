@@ -1,0 +1,121 @@
+
+
+
+
+Model Name: LR
+Training AUC: 0.7817
+Test AUC: 0.775
+
+Results on Test Set Prediction (min delta):
+Threshold: 0.1434
+Accuracy: 0.7047
+Precision: 0.319
+Specificity: 0.7046
+Sensitivity: 0.7049
+AUC: 0.7752
+AUPR: 0.5362
+
+Results on Test Set Prediction (max precision):
+Threshold: 0.982
+Accuracy: 0.836
+Precision: 1.0
+Specificity: 1.0
+Sensitivity: 0.0004
+AUC: 0.7752
+AUPR: 0.5822
+
+
+
+Model Name: XGB
+Training AUC: 0.8042
+Test AUC: 0.802
+
+Results on Test Set Prediction (min delta):
+Threshold: 0.1454
+Accuracy: 0.7254
+Precision: 0.3415
+Specificity: 0.7255
+Sensitivity: 0.7252
+AUC: 0.8025
+AUPR: 0.5559
+
+Results on Test Set Prediction (max precision):
+Threshold: 0.9962
+Accuracy: 0.836
+Precision: 1.0
+Specificity: 1.0
+Sensitivity: 0.0004
+AUC: 0.8025
+AUPR: 0.5822
+
+
+
+Model Name: AdaBoost
+Training AUC: 0.8023
+Test AUC: 0.8
+
+Results on Test Set Prediction (min delta):
+Threshold: 0.4551
+Accuracy: 0.721
+Precision: 0.3366
+Specificity: 0.7211
+Sensitivity: 0.7209
+AUC: 0.7998
+AUPR: 0.5517
+
+Results on Test Set Prediction (max precision):
+Threshold: 0.8122
+Accuracy: 0.836
+Precision: 1.0
+Specificity: 1.0
+Sensitivity: 0.0004
+AUC: 0.7998
+AUPR: 0.5822
+
+
+
+Model Name: Bagging
+Training AUC: 0.789
+Test AUC: 0.788
+
+Results on Test Set Prediction (min delta):
+Threshold: 0.1659
+Accuracy: 0.715
+Precision: 0.33
+Specificity: 0.715
+Sensitivity: 0.715
+AUC: 0.7876
+AUPR: 0.5459
+
+Results on Test Set Prediction (max precision):
+Threshold: 0.534
+Accuracy: 0.836
+Precision: 1.0
+Specificity: 1.0
+Sensitivity: 0.0004
+AUC: 0.7876
+AUPR: 0.5822
+
+
+
+Model Name: Random Forest
+Training AUC: 0.7916
+Test AUC: 0.792
+
+Results on Test Set Prediction (min delta):
+Threshold: 0.1671
+Accuracy: 0.7167
+Precision: 0.3318
+Specificity: 0.7167
+Sensitivity: 0.7167
+AUC: 0.792
+AUPR: 0.5475
+
+Results on Test Set Prediction (max precision):
+Threshold: 0.5938
+Accuracy: 0.836
+Precision: 1.0
+Specificity: 1.0
+Sensitivity: 0.0004
+AUC: 0.792
+AUPR: 0.5822

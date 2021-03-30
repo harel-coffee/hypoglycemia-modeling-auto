@@ -1,0 +1,433 @@
+
+
+
+
+Model Name: LR
+Training AUC: 0.6944
+Test AUC: 0.702
+
+Results on Test Set Prediction (min delta):
+Threshold: 0.1781
+Accuracy: 0.6396
+Precision: 0.3052
+Specificity: 0.6396
+Sensitivity: 0.6398
+AUC: 0.7018
+AUPR: 0.5082
+
+Results on Test Set Prediction (max precision):
+Threshold: 0.9908
+Accuracy: 0.8016
+Precision: 1.0
+Specificity: 1.0
+Sensitivity: 0.0003
+AUC: 0.7018
+AUPR: 0.5993
+
+
+
+Model Name: XGB
+Training AUC: 0.7297
+Test AUC: 0.741
+
+Results on Test Set Prediction (min delta):
+Threshold: 0.1752
+Accuracy: 0.6814
+Precision: 0.3461
+Specificity: 0.6814
+Sensitivity: 0.6813
+AUC: 0.7409
+AUPR: 0.5453
+
+Results on Test Set Prediction (max precision):
+Threshold: 0.9949
+Accuracy: 0.8016
+Precision: 1.0
+Specificity: 1.0
+Sensitivity: 0.0003
+AUC: 0.7409
+AUPR: 0.5993
+
+
+
+Model Name: AdaBoost
+Training AUC: 0.73
+Test AUC: 0.74
+
+Results on Test Set Prediction (min delta):
+Threshold: 0.4606
+Accuracy: 0.6797
+Precision: 0.3439
+Specificity: 0.6805
+Sensitivity: 0.6767
+AUC: 0.7405
+AUPR: 0.5424
+
+Results on Test Set Prediction (max precision):
+Threshold: 0.7868
+Accuracy: 0.8016
+Precision: 1.0
+Specificity: 1.0
+Sensitivity: 0.0003
+AUC: 0.7405
+AUPR: 0.5993
+
+
+
+Model Name: Bagging
+Training AUC: 0.7283
+Test AUC: 0.738
+
+Results on Test Set Prediction (min delta):
+Threshold: 0.1887
+Accuracy: 0.6785
+Precision: 0.3431
+Specificity: 0.6786
+Sensitivity: 0.6783
+AUC: 0.7382
+AUPR: 0.5426
+
+Results on Test Set Prediction (max precision):
+Threshold: 0.7329
+Accuracy: 0.8016
+Precision: 1.0
+Specificity: 1.0
+Sensitivity: 0.0003
+AUC: 0.7382
+AUPR: 0.5993
+
+
+
+Model Name: Random Forest
+Training AUC: 0.7266
+Test AUC: 0.735
+
+Results on Test Set Prediction (min delta):
+Threshold: 0.1921
+Accuracy: 0.6786
+Precision: 0.3433
+Specificity: 0.6787
+Sensitivity: 0.6786
+AUC: 0.7354
+AUPR: 0.5428
+
+Results on Test Set Prediction (max precision):
+Threshold: 0.7005
+Accuracy: 0.8016
+Precision: 1.0
+Specificity: 1.0
+Sensitivity: 0.0003
+AUC: 0.7354
+AUPR: 0.5993
+
+
+
+Model Name: Gradient Boosting
+Training AUC: 0.7317
+Test AUC: 0.741
+
+Results on Test Set Prediction (min delta):
+Threshold: 0.1757
+Accuracy: 0.6807
+Precision: 0.3454
+Specificity: 0.6808
+Sensitivity: 0.6804
+AUC: 0.7408
+AUPR: 0.5446
+
+Results on Test Set Prediction (max precision):
+Threshold: 0.9962
+Accuracy: 0.8016
+Precision: 1.0
+Specificity: 1.0
+Sensitivity: 0.0003
+AUC: 0.7408
+AUPR: 0.5993
+
+
+
+Model Name: Extra Trees Ensemble
+Training AUC: 0.7023
+Test AUC: 0.712
+
+Results on Test Set Prediction (min delta):
+Threshold: 0.2089
+Accuracy: 0.6499
+Precision: 0.3149
+Specificity: 0.6496
+Sensitivity: 0.6508
+AUC: 0.7119
+AUPR: 0.5175
+
+Results on Test Set Prediction (max precision):
+Threshold: 0.8845
+Accuracy: 0.8058
+Precision: 0.9487
+Specificity: 0.9997
+Sensitivity: 0.0226
+AUC: 0.7119
+AUPR: 0.5826
+
+
+
+Model Name: DTC
+Training AUC: 0.7033
+Test AUC: 0.706
+
+Results on Test Set Prediction (min delta):
+Threshold: 0.1903
+Accuracy: 0.6613
+Precision: 0.3251
+Specificity: 0.6624
+Sensitivity: 0.6569
+AUC: 0.7057
+AUPR: 0.525
+
+Results on Test Set Prediction (max precision):
+Threshold: 1.0
+Accuracy: 0.8107
+Precision: 1.0
+Specificity: 1.0
+Sensitivity: 0.0461
+AUC: 0.7057
+AUPR: 0.6177
+
+
+
+Model Name: ETC
+Training AUC: 0.7054
+Test AUC: 0.721
+
+Results on Test Set Prediction (min delta):
+Threshold: 0.494
+Accuracy: 0.6516
+Precision: 0.3184
+Specificity: 0.6487
+Sensitivity: 0.663
+AUC: 0.7212
+AUPR: 0.5241
+
+Results on Test Set Prediction (max precision):
+Threshold: 0.9851
+Accuracy: 0.819
+Precision: 0.9362
+Specificity: 0.9984
+Sensitivity: 0.0941
+AUC: 0.7212
+AUPR: 0.605
+
+
+
+Model Name: LDA
+Training AUC: 0.6945
+Test AUC: 0.702
+
+Results on Test Set Prediction (min delta):
+Threshold: 0.156
+Accuracy: 0.6409
+Precision: 0.3065
+Specificity: 0.6409
+Sensitivity: 0.641
+AUC: 0.7023
+AUPR: 0.5093
+
+Results on Test Set Prediction (max precision):
+Threshold: 0.9974
+Accuracy: 0.8016
+Precision: 1.0
+Specificity: 1.0
+Sensitivity: 0.0003
+AUC: 0.7023
+AUPR: 0.5993
+
+
+
+Model Name: QDA
+Training AUC: 0.7043
+Test AUC: 0.714
+
+Results on Test Set Prediction (min delta):
+Threshold: 0.0731
+Accuracy: 0.6614
+Precision: 0.3259
+Specificity: 0.6614
+Sensitivity: 0.6612
+AUC: 0.7138
+AUPR: 0.5271
+
+Results on Test Set Prediction (max precision):
+Threshold: 0.6637
+Accuracy: 0.8136
+Precision: 0.6327
+Specificity: 0.9793
+Sensitivity: 0.1442
+AUC: 0.7138
+AUPR: 0.4734
+
+
+
+Model Name: Ridge
+Training AUC: 0.6945
+Test AUC: 0.702
+
+Results on Test Set Prediction (min delta):
+Threshold: -0.6198
+Accuracy: 0.6409
+Precision: 0.3065
+Specificity: 0.6409
+Sensitivity: 0.641
+AUC: 0.7023
+AUPR: 0.5093
+
+Results on Test Set Prediction (max precision):
+Threshold: 1.5481
+Accuracy: 0.8016
+Precision: 1.0
+Specificity: 1.0
+Sensitivity: 0.0003
+AUC: 0.7023
+AUPR: 0.5993
+
+
+
+Model Name: SGD
+Training AUC: 0.6667
+Test AUC: 0.672
+
+Results on Test Set Prediction (min delta):
+Threshold: -0.9536
+Accuracy: 0.6218
+Precision: 0.2892
+Specificity: 0.6218
+Sensitivity: 0.6218
+AUC: 0.6721
+AUPR: 0.493
+
+Results on Test Set Prediction (max precision):
+Threshold: 0.9698
+Accuracy: 0.8016
+Precision: 1.0
+Specificity: 1.0
+Sensitivity: 0.0003
+AUC: 0.6721
+AUPR: 0.5993
+
+
+
+Model Name: BNB
+Training AUC: 0.681
+Test AUC: 0.69
+
+Results on Test Set Prediction (min delta):
+Threshold: 0.1832
+Accuracy: 0.6157
+Precision: 0.2956
+Specificity: 0.6003
+Sensitivity: 0.6777
+AUC: 0.6899
+AUPR: 0.5186
+
+Results on Test Set Prediction (max precision):
+Threshold: 0.9941
+Accuracy: 0.8016
+Precision: 1.0
+Specificity: 1.0
+Sensitivity: 0.0003
+AUC: 0.6899
+AUPR: 0.5993
+
+
+
+Model Name: GNB
+Training AUC: 0.6988
+Test AUC: 0.709
+
+Results on Test Set Prediction (min delta):
+Threshold: 0.0649
+Accuracy: 0.6523
+Precision: 0.3171
+Specificity: 0.6523
+Sensitivity: 0.6523
+AUC: 0.7087
+AUPR: 0.5192
+
+Results on Test Set Prediction (max precision):
+Threshold: 0.685
+Accuracy: 0.8126
+Precision: 0.6221
+Specificity: 0.9788
+Sensitivity: 0.1408
+AUC: 0.7087
+AUPR: 0.4667
+
+
+
+Model Name: KNN
+Training AUC: 0.673
+Test AUC: 0.681
+
+Results on Test Set Prediction (min delta):
+Threshold: 0.1667
+Accuracy: 0.5855
+Precision: 0.2797
+Specificity: 0.5594
+Sensitivity: 0.6911
+AUC: 0.6806
+AUPR: 0.516
+
+Results on Test Set Prediction (max precision):
+Threshold: 0.7
+Accuracy: 0.802
+Precision: 0.5789
+Specificity: 0.9988
+Sensitivity: 0.0067
+AUC: 0.6806
+AUPR: 0.3914
+
+
+
+Model Name: MLP
+Training AUC: 0.7307
+Test AUC: 0.74
+
+Results on Test Set Prediction (min delta):
+Threshold: 0.1587
+Accuracy: 0.6788
+Precision: 0.3434
+Specificity: 0.6787
+Sensitivity: 0.6789
+AUC: 0.7404
+AUPR: 0.543
+
+Results on Test Set Prediction (max precision):
+Threshold: 0.9959
+Accuracy: 0.8016
+Precision: 1.0
+Specificity: 1.0
+Sensitivity: 0.0003
+AUC: 0.7404
+AUPR: 0.5993
+
+
+
+Model Name: LSVC
+Training AUC: 0.6924
+Test AUC: 0.701
+
+Results on Test Set Prediction (min delta):
+Threshold: -0.6051
+Accuracy: 0.64
+Precision: 0.3056
+Specificity: 0.6401
+Sensitivity: 0.6398
+AUC: 0.7005
+AUPR: 0.5084
+
+Results on Test Set Prediction (max precision):
+Threshold: 1.0641
+Accuracy: 0.8016
+Precision: 1.0
+Specificity: 1.0
+Sensitivity: 0.0003
+AUC: 0.7005
+AUPR: 0.5993
