@@ -15,5 +15,5 @@ Sreekar Mantena1, Aldo Robles Arévalo2, Jason H. Maley3, Susana M. da Silva Vie
 
 Respository overview:
 
-* code/: Contains all the scripts used to extract data from the eICU-CRD database and develop prediction models
-* figures/: Contains all the figures included in the manuscript
+* `code/`: Contains all the scripts used to extract data from the eICU-CRD database and develop prediction models
+* `figures/`: Contains all the figures included in the manuscript
